@@ -3,10 +3,10 @@ package org.example;
 import java.util.Objects;
 
 public abstract class Predator {
-    private String color;
-    private int weight;
+    private final String color;
+    private final int weight;
 
-    public Predator(String color, int weight) {
+    protected Predator(String color, int weight) {
         this.color = color;
         this.weight = weight;
     }

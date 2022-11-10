@@ -3,7 +3,7 @@ package org.example;
 import java.util.Objects;
 
 public class Cat extends Predator {
-    private String breed;
+    private final String breed;
 
     public Cat(String color, int weight, String breed){
         super(color, weight);
@@ -11,19 +11,19 @@ public class Cat extends Predator {
     }
 
     protected void sleep() {
-        System.out.println("Zzzzz...");
+        System.out.println("\nZzzzz...");
     }
 
     protected void hunt() {
-        System.out.println("Rawr! A real predator.");
+        System.out.println("\nRawr! A real predator.");
     }
 
     protected void tygydyck() {
-        System.out.println("TYGYDYCK-TYGYDYCK!");
+        System.out.println("\nTYGYDYCK-TYGYDYCK!");
     }
 
     protected void lickBalls() {
-        System.out.println("*Well, he licks his balls. Why are you staring?*");
+        System.out.println("\n*Well, he licks his balls. Why are you staring?*");
     }
 
     @Override

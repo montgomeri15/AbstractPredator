@@ -11,7 +11,7 @@ public class App {
         System.out.println(cat1.equals(cat3));
         System.out.println(cat2.equals(cat3));
 
-
-
+        ActionsSchedule actionsSchedule = new ActionsSchedule();
+        actionsSchedule.actionPerform(cat1);
     }
 }
