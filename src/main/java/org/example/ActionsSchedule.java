@@ -1,16 +1,14 @@
 package org.example;
 
-import java.util.Calendar;
-
 public class ActionsSchedule {
-    private final int day = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
-
-    protected void actionPerform(Cat cat){
+    private String outAction;
+    protected String actionPerform(Cat cat, int day){
         switch(day){
-            case 2, 4, 6 -> System.out.println(cat.sleep());
-            case 3, 5, 7 -> System.out.println(cat.hunt());
-            case 1 -> System.out.println(cat.tygydyck());
-            default -> System.out.println(cat.lickBalls());
+            case 2, 4, 6 -> outAction = cat.sleep();
+            case 3, 5, 7 -> outAction = cat.hunt();
+            case 1 -> outAction = cat.tygydyck();
+            default -> outAction = cat.lickBalls();
         }
+        return outAction;
     }
 }

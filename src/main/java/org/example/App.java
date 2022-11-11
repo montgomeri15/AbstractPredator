@@ -1,6 +1,9 @@
 package org.example;
 
+import java.util.Calendar;
+
 public class App {
+    private static final int day = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
 
     public static void main( String[] args ) {
         Cat cat1 = new Cat("Red", 3, "No breed");
@@ -12,6 +15,6 @@ public class App {
         System.out.println(cat2.equals(cat3));
 
         ActionsSchedule actionsSchedule = new ActionsSchedule();
-        actionsSchedule.actionPerform(cat1);
+        System.out.println(actionsSchedule.actionPerform(cat1, day));
     }
 }
