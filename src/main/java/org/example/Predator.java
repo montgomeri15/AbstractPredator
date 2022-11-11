@@ -11,8 +11,8 @@ public abstract class Predator {
         this.weight = weight;
     }
 
-    protected abstract void sleep();
-    protected abstract void hunt();
+    protected abstract String sleep();
+    protected abstract String hunt();
 
     @Override
     public String toString() {

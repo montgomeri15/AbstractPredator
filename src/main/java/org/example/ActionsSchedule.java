@@ -7,10 +7,10 @@ public class ActionsSchedule {
 
     protected void actionPerform(Cat cat){
         switch(day){
-            case 2, 4, 6 -> cat.sleep();
-            case 3, 5, 7 -> cat.hunt();
-            case 1 -> cat.tygydyck();
-            default -> cat.lickBalls();
+            case 2, 4, 6 -> System.out.println(cat.sleep());
+            case 3, 5, 7 -> System.out.println(cat.hunt());
+            case 1 -> System.out.println(cat.tygydyck());
+            default -> System.out.println(cat.lickBalls());
         }
     }
 }

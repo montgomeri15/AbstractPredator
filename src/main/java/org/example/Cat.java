@@ -1,8 +1,22 @@
 package org.example;
 
+import org.properties.work.PropertiesFileReader;
+
+import java.io.IOException;
 import java.util.Objects;
+import java.util.Properties;
 
 public class Cat extends Predator {
+    private PropertiesFileReader propertiesFileReader = new PropertiesFileReader();
+    private Properties prop;
+    {
+        try {
+            prop = propertiesFileReader.readPropertiesFile("src/main/java/resources/config.properties");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     private final String breed;
 
     public Cat(String color, int weight, String breed){
@@ -10,20 +24,20 @@ public class Cat extends Predator {
         this.breed = breed;
     }
 
-    protected void sleep() {
-        System.out.println("\nZzzzz...");
+    protected String sleep() {
+        return prop.getProperty("sleep.action");
     }
 
-    protected void hunt() {
-        System.out.println("\nRawr! A real predator.");
+    protected String hunt() {
+        return prop.getProperty("hunt.action");
     }
 
-    protected void tygydyck() {
-        System.out.println("\nTYGYDYCK-TYGYDYCK!");
+    protected String tygydyck() {
+        return prop.getProperty("tygydyck.action");
     }
 
-    protected void lickBalls() {
-        System.out.println("\n*Well, he licks his balls. Why are you staring?*");
+    protected String lickBalls() {
+        return prop.getProperty("lickBalls.action");
     }
 
     @Override
