@@ -3,6 +3,7 @@ package org.example;
 import java.util.Calendar;
 
 public class App {
+    //Не через Enum, а з визначенням поточного дня тижня
     private static final int day = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
 
     public static void main( String[] args ) {
